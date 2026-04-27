@@ -1,0 +1,200 @@
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* Node styling */
+.node {
+  background: #1e293b;
+  color: #f1f5f9;
+  padding: 16px;
+  border-radius: 12px;
+  min-width: 220px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5), 0 0 0 1px #334155;
+  transition: box-shadow 0.2s;
+  border: 1px solid #334155;
+}
+
+.node:hover {
+  box-shadow: 0 12px 28px rgba(0,0,0,0.7), 0 0 0 1px #4b5563;
+}
+
+.node-title {
+  font-weight: 600;
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.node-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.9rem;
+}
+
+.node-content label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  color: #cbd5e1;
+}
+
+.node-content input,
+.node-content select,
+.node-content textarea {
+  background: #0f172a;
+  border: 1px solid #334155;
+  color: #f1f5f9;
+  padding: 6px 8px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.node-content input:focus,
+.node-content select:focus,
+.node-content textarea:focus {
+  border-color: #3b82f6;
+}
+
+.node-content textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+/* Toolbar styling */
+.toolbar {
+  padding: 16px;
+  background: #1e293b;
+  border-bottom: 1px solid #334155;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.toolbar-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.draggable-node {
+  cursor: grab;
+  min-width: 90px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: #0f172a;
+  color: #e2e8f0;
+  border: 1px solid #334155;
+  font-weight: 500;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.draggable-node:hover {
+  background: #1e293b;
+  border-color: #4b5563;
+}
+
+.draggable-node:active {
+  cursor: grabbing;
+  transform: scale(0.98);
+}
+
+/* Submit button */
+.submit-btn {
+  position: absolute;
+  z-index: 10;
+  top: 10px;
+  right: 20px;
+  padding: 10px 20px;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(59,130,246,0.3);
+  transition: background 0.2s;
+}
+
+.submit-btn:hover {
+  background: #2563eb;
+}
+
+/* Delete button */
+.delete-btn {
+  position: absolute;
+  margin-left: 10px;
+  top: 57px;
+  right: 20px;
+  padding: 10px 20px;
+  background: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.delete-btn:hover:not(:disabled) {
+  background: #dc2626;
+}
+
+.delete-btn:disabled {
+  background: #6b7280;
+  cursor: not-allowed;
+}
+
+/* ReactFlow background */
+.react-flow__background {
+  background-color: #0f172a;
+}
+
+.react-flow__controls {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.react-flow__controls button {
+  background: #1e293b;
+  color: #e2e8f0;
+  border: none;
+  border-bottom: 1px solid #334155;
+}
+
+.react-flow__controls button:hover {
+  background: #2d3a4f;
+}
+
+.react-flow__minimap {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 8px;
+}
+
+/* Adjust handle colors */
+.react-flow__handle {
+  background: #3b82f6;
+  width: 8px;
+  height: 8px;
+}
+
+.react-flow__handle:hover {
+  background: #60a5fa;
+}
