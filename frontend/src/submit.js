@@ -8,7 +8,7 @@ const selector = (state) => ({
 
 export const SubmitButton = () => {
   const { nodes, edges } = useStore(selector, shallow);
-  const REACT_APP_API_URL = "https://flowcanvas-chi.vercel.app";
+  const REACT_APP_API_URL = "https://flowcanvas-chi.vercel.app" || 'http://localhost:8000';
 
   const handleSubmit = async () => {
     try {
